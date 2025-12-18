@@ -12,13 +12,13 @@ provider "render" {
 }
 
 resource "render_static_site" "example" {
-  name          = "render-terraform-example-try6"
-  repo_url      = "https://github.com/zouaouim/Render-terraform-example"
-  branch        = "main"
-  build_command = "" # no build needed for html file, ---- ken 3ana container we prepare Dockerfile
-  publish_path  = "."
-  auto_deploy   = true
-  force_redeploy= true
+  name           = "render-terraform-example-try6"
+  repo_url       = "https://github.com/zouaouim/Render-terraform-example"
+  branch         = "main"
+  build_command  = "" # no build needed for html file, ---- ken 3ana container we prepare Dockerfile
+  publish_path   = "."
+  auto_deploy    = true
+  force_redeploy = true
 }
 
 output "site_url" {
