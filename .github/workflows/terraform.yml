@@ -29,6 +29,15 @@ jobs:
       - name: Terraform Format Check
         run: terraform fmt -check
 
+      - name: Terraform import
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_OWNER_ID: ${{ secrets.RENDER_OWNER_ID }}
+        run: terraform import render_service.render-terraform-example-try6 srv-d51sb3juibrs739h4qog
+
+      - name: Terraform destroy (plan only)
+        run: terraform destroy -auto-approve
+
       - name: Terraform Plan
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
