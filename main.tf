@@ -18,6 +18,7 @@ resource "render_static_site" "example" {
   build_command = "" # no build needed for html file, ---- ken 3ana container we prepare Dockerfile
   publish_path  = "."
   auto_deploy   = true
+  force_redeploy= true
 }
 
 output "site_url" {
