@@ -33,7 +33,7 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           RENDER_OWNER_ID: ${{ secrets.RENDER_OWNER_ID }}
-        run: terraform import render_service.example srv-d51sb3juibrs739h4qog
+        run: terraform import render_static_site.example srv-d51sb3juibrs739h4qog
 
       - name: Terraform destroy (plan only)
         run: terraform destroy -auto-approve
